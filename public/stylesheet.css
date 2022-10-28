@@ -1,0 +1,377 @@
+/* google Fonts
+font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Satisfy', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/* Colours */
+:root {
+    --headingColor: #02790a;
+    --PrimeColor: #01960a;
+    --textGrey: #625f5f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* All elements */
+html {
+    max-width: 1778px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Selectors */
+nav ul li a:hover,
+nav ul li a:active , .active{
+    color: var(--PrimeColor);
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav div div{
+    position: relative;
+    z-index: -1;
+}
+
+nav div div img+ span{
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+    color: var(--PrimeColor);
+}
+
+#aboutSlide img+p{
+    position: absolute;
+    bottom: 0;
+    left:-100%;
+    font-size: 1.3rem;
+}
+
+#events .grid9{
+    grid-template-rows: 1fr;
+}
+
+#testimonial .paragraph{
+    padding: 5rem;
+}
+
+.box h2{
+    margin: 2rem;
+    color: var(--headingColor);
+    font-size: 1.7rem
+ }
+
+ #downMenu *{
+    padding: 1.5rem;
+    font-size: 20px;
+ }
+
+ #events img{
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 2rem 2rem;
+ }
+
+ #events p{
+   margin: auto 2rem 1rem;
+ }
+
+ .form input{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    padding: .8rem 1.5rem;
+ }
+
+ #contact .subHead{
+    color: white;
+    margin: 0% 0% 3rem;
+}
+
+#contact .paragraph{
+    color: white;
+    padding: 0;
+}
+
+/* Id selectors */
+#logo {
+    width: 85px;
+    height: 85px;
+    margin-left: 2rem;
+}
+
+#home, #aboutSlide {
+    position: relative;
+}
+
+#imgContainer, #slideContainer{
+    transition: .25s;
+}
+
+#specialist{
+    margin: 4rem;
+}
+
+#testimonial{
+    position: relative;
+    padding: 2rem 7rem;
+}
+
+#downMenu{
+    position: absolute;
+    height: 60vh;
+    top: -80vh;
+    width: 100vw;
+    transition: .2s;
+    background-color: whitesmoke;
+    z-index: 3;
+    text-align: center;
+    color: var(--PrimeColor);
+}
+
+#contact{
+    background-color: #01960a;
+    padding: 4rem;
+    color: white;
+}
+
+
+
+
+
+/* ------------------- Classes ---------------------------- */
+/* Layout classes */
+.grid6040 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+}
+
+.grid3070n{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
+}
+
+.grid3070{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
+}
+.grid9{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+justify-items: center;
+grid-gap: 3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+    height: 28rem;
+    width: 85%;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    box-shadow: -3px -3px 10px -4px;
+    position: relative;
+}
+
+.form{
+    border: 2px solid whitesmoke;
+    text-align: center;
+    box-shadow: -3px -3px 10px -4px;
+    max-width: 40%;
+    margin: auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+/* Text */
+
+.bigHead {
+    font-size: 4rem;
+    margin: .5rem auto;
+    color: var(--headingColor);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+}
+
+.subHead{
+  font-size: 3rem;
+  color: var(--headingColor);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin: 6rem;
+}
+
+.smallHead{
+  font-size: 1.8rem;
+  color: var(--headingColor);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subTitle{
+    font-family: 'Satisfy', cursive;
+    font-size: 1.2rem;
+    color: var(--textGrey);
+    margin-bottom: 2rem;
+}
+
+.textLayer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Margins*/
+.margLeft {
+    margin: 3rem 0 0 3rem;
+}
+
+.sectionMarging{
+    margin-bottom: 3rem;
+}
+
+.paragraph{
+    line-height: 1.5;
+    padding: 2rem;
+    color: var(--textGrey);
+    font-size: 1.2rem;
+}
+/* Button */
+.btn_common {
+    font-weight: bolder;
+    margin: 20px auto;
+    margin-right: 20px;
+    background-color: var(--PrimeColor);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn_big {
+    padding: 15px 25px;
+}
+
+.btn_small {
+    padding: 10px 20px;
+}
+.btn_common:hover{
+  background-color: whitesmoke;
+  transition: .5s;
+  color: var(--PrimeColor); 
+  cursor: pointer;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 106, 78);
+    background: linear-gradient(90deg, rgba(0, 106, 78, 1) 3%, rgba(17, 145, 96, 1) 32%, rgba(23, 177, 105, 1) 55%);
+    opacity: .1;
+}
+
+/* Images */
+.png {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.inBoxPng{
+    max-height: 60%;
+    display: block;
+    margin: auto;
+    background-color: white;
+}
+
+#slideImg{
+    max-width: 50%;
+    margin-left: 6rem;
+    max-height: 100%;
+    border-radius: 10%;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#events{
+    margin:auto 4rem 7rem;
+}
+
+
+
+.roundImg{
+    border-radius: 100%;
+}
+/* Designs */
+.slideBar{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.rightDesign {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    max-width: 50%;
+    z-index: -1;
+}
+
+.circle{
+    background-color: #8a8888;
+    padding: 0.1rem 0.5rem;
+    margin: 0.5rem;
+}
+
+/* Icons */
+.iconbar{
+    display: none;
+    justify-self: end;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.icons{
+    padding: 1.2rem;
+    font-size: 2rem;
+}
+
+.icons:hover{
+    color: black;
+    cursor: pointer;
+}
+
+/* Functiona; Classes */
+.hidden{
+    display: none;
+}
